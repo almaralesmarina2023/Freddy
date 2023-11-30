@@ -12,7 +12,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 const appRoutes:Routes = [
   {path : '', component:ListarRecetasComponent},
   {path : 'Receta', component:RecetasComponent},
-  {path : 'Detalles', component:DetallesRecetasComponent},
+  {path : 'Detalles/:id', component:DetallesRecetasComponent},
   {path : 'QuienesSomos', component:QuienesSomosComponent},
   {path : 'Contacto', component:ContactoComponent}
   

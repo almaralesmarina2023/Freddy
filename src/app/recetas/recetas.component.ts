@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Recetas } from '../listar-recetas/recetas.model';
 
 @Component({
   selector: 'app-recetas',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./recetas.component.css']
 })
 export class RecetasComponent {
-
+@Input() Receta_Recibida:Recetas= new Recetas;
+@Input() indice:number=0;
 }
