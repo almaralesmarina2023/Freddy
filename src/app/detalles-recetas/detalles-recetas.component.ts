@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detalles-recetas',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./detalles-recetas.component.css']
 })
 export class DetallesRecetasComponent {
+indice:number=0;
 
+constructor(private route:ActivatedRoute)
+{
+  this.indice=this.route.snapshot.params['id'];
+} 
 }
