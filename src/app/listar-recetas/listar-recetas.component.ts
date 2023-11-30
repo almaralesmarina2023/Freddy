@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recetas } from './recetas.model';
 
 @Component({
   selector: 'app-listar-recetas',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class ListarRecetasComponent {
 
+  BD_Recetas:Recetas[]=[];
 }
