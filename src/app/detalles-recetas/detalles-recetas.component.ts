@@ -3,8 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { Recetas } from '../listar-recetas/recetas.model';
 import { DsRecetasService } from '../ds-recetas.service';
 
+import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-detalles-recetas',
+  standalone:true,
+  imports: [FormsModule],
   templateUrl: './detalles-recetas.component.html',
   styleUrls: ['./detalles-recetas.component.css']
 })

@@ -1,12 +1,14 @@
 <br>
-<img [src]=d_Img>
-<h3>{{d_nombre}}</h3>
-<br>
-<h5>Metodos de preparacion</h5>
-<p>{{d_metodo}}</p>
-<br>
-<h5>Listado de Ingredientes:</h5>
-<ul>
-    <li *ngFor="let item of d_Ingredientes,let i=index" >{{item}} </li>
-</ul>
-
+  <img [src]=d_Img>
+  <h3>{{d_nombre}}</h3>
+  <br>
+    <h5>Metodos de preparacion</h5>
+    <p>{{d_metodo}}</p>
+    <br>
+      <h5>Listado de Ingredientes:</h5>
+      <ul>
+        @for (item of d_Ingredientes; track item; let i = $index) {
+          <li >{{item}} </li>
+        }
+      </ul>
+      
