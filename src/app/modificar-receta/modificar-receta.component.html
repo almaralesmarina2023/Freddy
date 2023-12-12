@@ -1,0 +1,27 @@
+<h3>Modificar Receta</h3>
+
+<img [src]=d_Img>
+<br>
+<br>
+<label>Nombre:</label><br>
+<input [(ngModel)]="d_nombre"><br>
+<label>Metodo de Preparacion:</label><br>
+<input [(ngModel)]="d_metodo"><br><br>
+<h4>Lista de Ingredientes</h4>
+
+    @for (item of d_Ingredientes; track item; let i = $index) {
+      <input type="text" class="form-control" [(ngModel)]="d_Ingredientes[i].nombre">
+      
+    }
+
+
+<br>
+<br>
+<button (click)="Modificar()">Modificar</button>
+
+
+
+
+
+
+

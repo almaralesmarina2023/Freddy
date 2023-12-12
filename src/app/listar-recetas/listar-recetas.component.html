@@ -1,4 +1,8 @@
 <h2>Recetas de Cocina Cubana</h2>
-@for (item of BD_Recetas; track item; let indice = $index) {
+<p>Filtrar por Recetas o Ingredientes</p>
+<input placeholder="Filtrar" [(ngModel)]="filtroR">
+<br>
+<br>
+@for (item of BD_Recetas|filtroReceta:filtroR; track item; let indice = $index) {
   <app-recetas [Receta_Recibida]="item" [indice]="indice"></app-recetas>
 }
