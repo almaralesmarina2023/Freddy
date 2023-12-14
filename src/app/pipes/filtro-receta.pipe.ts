@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Recetas } from './listar-recetas/recetas.model';
+import { Receta } from '../models/recetas.model';
 
 @Pipe({
   name: 'filtroReceta',
@@ -7,9 +7,9 @@ import { Recetas } from './listar-recetas/recetas.model';
 })
 export class FiltroRecetaPipe implements PipeTransform {
 
-  transform(recetas: Recetas[],parametro:string): Recetas[] {
+  transform(recetas: Receta[],parametro:string): Receta[] {
     
-    let r:Recetas[]=[];
+    let r:Receta[]=[];
     
     
     if(parametro=="")

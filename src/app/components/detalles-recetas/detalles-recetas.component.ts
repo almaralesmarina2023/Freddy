@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router, RouterLink, Routes } from '@angular/router';
-import { Recetas } from '../listar-recetas/recetas.model';
-import { DsRecetasService } from '../ds-recetas.service';
+import { Receta } from '../../models/recetas.model';
+import { DsRecetasService } from '../../services/ds-recetas.service';
 
 import { FormsModule } from '@angular/forms';
-import { Ingredientes } from '../modificar-receta/Ingredientes.model';
+import { Ingredientes } from '../../models/Ingredientes.model';
 
 @Component({
   selector: 'app-detalles-recetas',
@@ -19,7 +19,7 @@ d_nombre:string="";
 d_metodo:string="";
 d_Ingredientes:Ingredientes[]=[];
 d_Img:string="";
-d_Receta:Recetas=new Recetas;
+d_Receta:Receta=new Receta;
 constructor(private route:ActivatedRoute, private ds_servicio:DsRecetasService, private router:Router)
 {
   this.indice=this.route.snapshot.params['id'];

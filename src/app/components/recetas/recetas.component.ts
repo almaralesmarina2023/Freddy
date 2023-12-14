@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Recetas } from '../listar-recetas/recetas.model';
+import { Receta } from '../../models/recetas.model';
 import { RouterLink } from '@angular/router';
 
 import { ListarRecetasComponent } from '../listar-recetas/listar-recetas.component';
@@ -14,6 +14,6 @@ import { ListarRecetasComponent } from '../listar-recetas/listar-recetas.compone
   
 })
 export class RecetasComponent {
-@Input() Receta_Recibida:Recetas= new Recetas;
+@Input() Receta_Recibida:Receta= new Receta;
 @Input() indice:number=0;
 }

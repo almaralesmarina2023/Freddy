@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { Recetas } from './recetas.model';
-import { DsRecetasService } from '../ds-recetas.service';
+import { Receta } from '../../models/recetas.model';
+import { DsRecetasService } from '../../services/ds-recetas.service';
 
 import { FormsModule } from '@angular/forms';
 import { RecetasComponent } from '../recetas/recetas.component';
-import { FiltroRecetaPipe } from '../filtro-receta.pipe';
+import { FiltroRecetaPipe } from 'src/app/pipes/filtro-receta.pipe';
+
 
 @Component({
   selector: 'app-listar-recetas',
@@ -15,7 +16,7 @@ import { FiltroRecetaPipe } from '../filtro-receta.pipe';
 })
 export class ListarRecetasComponent {
 
-  BD_Recetas:Recetas[]=[];
+  BD_Recetas:Receta[]=[];
   filtroR:string=""
   constructor(private servicio:DsRecetasService){
     this.BD_Recetas=this.servicio.DSarrayRecetas;

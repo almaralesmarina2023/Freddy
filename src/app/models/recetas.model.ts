@@ -1,6 +1,6 @@
-import { Ingredientes } from "../modificar-receta/Ingredientes.model";
+import { Ingredientes } from "./Ingredientes.model";
 
-export class Recetas{
+export class Receta{
    
     nombre:string="";
     metodo_preparacion:string="";

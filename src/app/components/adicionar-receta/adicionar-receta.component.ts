@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DsRecetasService } from '../ds-recetas.service';
-import { Recetas } from '../listar-recetas/recetas.model';
-import { Ingredientes } from '../modificar-receta/Ingredientes.model';
+import { DsRecetasService } from '../../services/ds-recetas.service';
+import { Receta } from '../../models/recetas.model';
+import { Ingredientes } from '../../models/Ingredientes.model';
 
 @Component({
   selector: 'app-adicionar-receta',
@@ -27,7 +27,7 @@ export class AdicionarRecetaComponent {
 
   AdicionarReceta():void{
     
-    let temp_receta=new Recetas(this.nombre_agg,this.metodo_preparacion_agg,this.ingredientes_agg,this.Img_agg);
+    let temp_receta=new Receta(this.nombre_agg,this.metodo_preparacion_agg,this.ingredientes_agg,this.Img_agg);
     this.acceso.Adicionar_Receta(temp_receta);
     this.nombre_agg="";
     this.metodo_preparacion_agg="";

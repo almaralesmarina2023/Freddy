@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DsRecetasService } from '../ds-recetas.service';
-import { Recetas } from '../listar-recetas/recetas.model';
+import { DsRecetasService } from '../../services/ds-recetas.service';
+import { Receta } from '../../models/recetas.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Ingredientes } from './Ingredientes.model';
+import { Ingredientes } from '../../models/Ingredientes.model';
 
 @Component({
   selector: 'app-modificar-receta',
@@ -15,7 +15,7 @@ import { Ingredientes } from './Ingredientes.model';
 })
 export class ModificarRecetaComponent {
   indice:number=0;
-  d_Receta!:Recetas;
+  d_Receta!:Receta;
   d_nombre:string="";
   d_metodo:string="";
   d_Img:string="";
@@ -32,7 +32,7 @@ export class ModificarRecetaComponent {
   } 
 
   Modificar():void{
-   let r:Recetas=new Recetas(this.d_nombre,this.d_metodo,this.d_Ingredientes,this.d_Img);
+   let r:Receta=new Receta(this.d_nombre,this.d_metodo,this.d_Ingredientes,this.d_Img);
    this.ds_servicio.ModificarReceta(this.indice,r);
    this.router.navigate(['']);
   }
