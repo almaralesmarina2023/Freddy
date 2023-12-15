@@ -15,23 +15,26 @@ import { Ingredientes } from '../../models/Ingredientes.model';
 })
 export class DetallesRecetasComponent {
 indice:number=0;
+d_id:number=0;
 d_nombre:string="";
 d_metodo:string="";
 d_Ingredientes:Ingredientes[]=[];
 d_Img:string="";
-d_Receta:Receta=new Receta;
+d_Receta!:Receta;
 constructor(private route:ActivatedRoute, private ds_servicio:DsRecetasService, private router:Router)
 {
   this.indice=this.route.snapshot.params['id'];
+  
   this.d_Receta=this.ds_servicio.obtener_Receta(this.indice);
+  this.d_id=this.d_Receta.id;
   this.d_nombre=this.d_Receta.nombre;
   this.d_metodo=this.d_Receta.metodo_preparacion;
   this.d_Img=this.d_Receta.Img;
   this.d_Ingredientes=this.d_Receta.ingredientes;
 } 
 
-EliminarReceta(posicion:number):void{
-  this.ds_servicio.EliminarReceta(posicion);
+EliminarReceta(posicion:number,idBD:number):void{
+  this.ds_servicio.EliminarReceta(posicion,idBD);
   this.router.navigate(['']);
       
 }

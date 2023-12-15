@@ -6,9 +6,11 @@ import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AdicionarRecetaComponent } from './components/adicionar-receta/adicionar-receta.component';
 import { ModificarRecetaComponent } from './components/modificar-receta/modificar-receta.component';
+import { CLauncherComponent } from './components/c-launcher/c-launcher.component';
 
 export const routes: Routes = [
-    {path : '', component:ListarRecetasComponent},
+    {path : '', component:CLauncherComponent},
+    {path:'Listado',component:ListarRecetasComponent},
     {path : 'Receta', component:RecetasComponent},
     {path : 'Detalles/:id', component:DetallesRecetasComponent},
     {path : 'QuienesSomos', component:QuienesSomosComponent},

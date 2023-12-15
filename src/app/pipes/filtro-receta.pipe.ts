@@ -10,14 +10,17 @@ export class FiltroRecetaPipe implements PipeTransform {
   transform(recetas: Receta[],parametro:string): Receta[] {
     
     let r:Receta[]=[];
-    
+    //
     
     if(parametro=="")
     return recetas;
-
+    
     for(let i of recetas)
-      if(i.getNombre().toLowerCase().indexOf(parametro)>-1)
-        r.push(i);
+      if(i.nombre.toLowerCase().indexOf(parametro)>-1)
+        {
+          r.push(i);
+         // alert(recetas);
+        }
 
         // for(let j of r)
         // alert(j.getNombre());

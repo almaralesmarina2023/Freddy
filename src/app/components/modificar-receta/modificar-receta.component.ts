@@ -15,6 +15,7 @@ import { Ingredientes } from '../../models/Ingredientes.model';
 })
 export class ModificarRecetaComponent {
   indice:number=0;
+  d_id:number=0;
   d_Receta!:Receta;
   d_nombre:string="";
   d_metodo:string="";
@@ -25,6 +26,7 @@ export class ModificarRecetaComponent {
   {
     this.indice=this.route.snapshot.params['id'];
     this.d_Receta=this.ds_servicio.obtener_Receta(this.indice);
+    this.d_id=this.d_Receta.id;
     this.d_nombre=this.d_Receta.nombre;
     this.d_metodo=this.d_Receta.metodo_preparacion;
     this.d_Img=this.d_Receta.Img;
@@ -32,7 +34,7 @@ export class ModificarRecetaComponent {
   } 
 
   Modificar():void{
-   let r:Receta=new Receta(this.d_nombre,this.d_metodo,this.d_Ingredientes,this.d_Img);
+   let r:Receta=new Receta(this.d_id,this.d_nombre,this.d_metodo,this.d_Ingredientes,this.d_Img);
    this.ds_servicio.ModificarReceta(this.indice,r);
    this.router.navigate(['']);
   }

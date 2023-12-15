@@ -1,19 +1,44 @@
 {
-  "posts": [
+  "Recetas": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": 5,
+      "nombre": "Mariquitas",
+      "metodo_preparacion": "freir",
+      "ingredientes": [
+        {
+          "nombre": "fongo",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "aceite",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "sal",
+          "cantidad": "Una cucharada"
+        }
+      ],
+      "Img": "./assets/chicharritas-platano-e1497017839458-150x150.jpg"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 6,
+      "nombre": "Albongida en Salsa",
+      "metodo_preparacion": "preparar",
+      "ingredientes": [
+        {
+          "nombre": "carne",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "salsa",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "harina",
+          "cantidad": "Una cucharada"
+        }
+      ],
+      "Img": "./assets/chicharritas-platano-e1497017839458-150x150.jpg"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

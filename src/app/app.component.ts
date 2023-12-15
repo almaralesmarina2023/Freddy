@@ -1,6 +1,7 @@
 
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { DsRecetasService } from './services/ds-recetas.service';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,5 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'my-app';
+
 }
