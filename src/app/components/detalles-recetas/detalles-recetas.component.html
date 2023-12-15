@@ -1,0 +1,16 @@
+<br>
+  <img [src]=d_Img>
+  <h3>{{d_nombre}}</h3>
+  <br>
+  <button (click)="Modificar()">Modificar</button>
+  <button (click)="EliminarReceta(indice,d_id)">Borrar</button>
+    <h5>Metodos de preparacion</h5>
+    <p>{{d_metodo}}</p>
+    <br>
+      <h5>Listado de Ingredientes:</h5>
+      <ul>
+        @for (item of d_Ingredientes; track item; let i = $index) {
+          <li >{{item}} </li>
+        }
+      </ul>
+      

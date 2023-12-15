@@ -1,0 +1,44 @@
+{
+  "Recetas": [
+    {
+      "id": 5,
+      "nombre": "Mariquitas",
+      "metodo_preparacion": "freir",
+      "ingredientes": [
+        {
+          "nombre": "fongo",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "aceite",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "sal",
+          "cantidad": "Una cucharada"
+        }
+      ],
+      "Img": "./assets/chicharritas-platano-e1497017839458-150x150.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Albongida en Salsa",
+      "metodo_preparacion": "preparar",
+      "ingredientes": [
+        {
+          "nombre": "carne",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "salsa",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "harina",
+          "cantidad": "Una cucharada"
+        }
+      ],
+      "Img": "./assets/chicharritas-platano-e1497017839458-150x150.jpg"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<h3>Agregar Receta</h3>
+<br>
+<input placeholder="nombre" [(ngModel)]="nombre_agg">
+<input placeholder="metodo preparacion" [(ngModel)]="metodo_preparacion_agg">
+<button (click)="AdicionarReceta()">Agregar Receta</button>
+<br>
+<div>
+    <h6>Lista de Ingredientes</h6>
+    <input placeholder="Ingredientes" [(ngModel)]="ingrediente">
+    
+    <button (click)="CapturarIngrediente()">Agregar Ingrediente</button>
+</div>
+@if (ingredientes_agg.length>0) {
+    <h5>Listado de Ingredientes:</h5>
+    <br>
+    
+    <ul>
+      @for (item of ingredientes_agg; track item; let i = $index) {
+        <li >{{item}} </li>
+      }
+    </ul>}
+
+
+
