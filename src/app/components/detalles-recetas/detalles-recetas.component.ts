@@ -24,7 +24,7 @@ d_Receta!:Receta;
 constructor(private route:ActivatedRoute, private ds_servicio:DsRecetasService, private router:Router)
 {
   this.indice=this.route.snapshot.params['id'];
-  
+  alert("arreglo en detalles"+this.ds_servicio.DSarrayRecetas)
   this.d_Receta=this.ds_servicio.obtener_Receta(this.indice);
   this.d_id=this.d_Receta.id;
   this.d_nombre=this.d_Receta.nombre;

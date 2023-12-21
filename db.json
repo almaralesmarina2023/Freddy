@@ -6,7 +6,7 @@
       "metodo_preparacion": "freir",
       "ingredientes": [
         {
-          "nombre": "fongo",
+          "nombre": "uhjghjghjgjhg",
           "cantidad": "Una cucharada"
         },
         {
@@ -22,7 +22,7 @@
     },
     {
       "id": 6,
-      "nombre": "Albongida en Salsa",
+      "nombre": "Adrian",
       "metodo_preparacion": "preparar",
       "ingredientes": [
         {
@@ -39,6 +39,66 @@
         }
       ],
       "Img": "./assets/chicharritas-platano-e1497017839458-150x150.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Alvaro Congris",
+      "metodo_preparacion": "sadsfsdf",
+      "ingredientes": [
+        {
+          "nombre": "asfdsdf",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "asfdsdfsdfsd",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "yyyyy",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "eeee",
+          "cantidad": "Una cucharada"
+        }
+      ],
+      "Img": "./assets/fritura-malanga-e1494857372839-150x150.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "pepito",
+      "metodo_preparacion": "asda",
+      "ingredientes": [
+        {
+          "nombre": "r",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "y",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "i",
+          "cantidad": "Una cucharada"
+        }
+      ],
+      "Img": "./assets/fritura-malanga-e1494857372839-150x150.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "queso",
+      "metodo_preparacion": "safsfds",
+      "ingredientes": [
+        {
+          "nombre": "leche ",
+          "cantidad": "Una cucharada"
+        },
+        {
+          "nombre": "agua",
+          "cantidad": "Una cucharada"
+        }
+      ],
+      "Img": "./assets/fritura-malanga-e1494857372839-150x150.jpg"
     }
   ]
 }

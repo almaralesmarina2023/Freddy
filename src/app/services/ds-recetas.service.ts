@@ -2,6 +2,7 @@ import { Injectable, OnInit } from '@angular/core';
 import { Receta } from '../models/recetas.model';
 import { Ingredientes } from '../models/Ingredientes.model';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -27,12 +28,15 @@ export class DsRecetasService implements OnInit {
     alert("Oninit ds")
   }
 
-  getDatos():Receta[]{
-    //alert("GetDatos del ds"+this.DSarrayRecetas)
-    this.http.get<Receta[]>("http://localhost:3000/Recetas").subscribe(dato=>{this.DSarrayRecetas=dato;})
-    return this.DSarrayRecetas;
+  getDatos():Observable<Receta[]>{
+    //alert(this.DSarrayRecetas)
+    let datos$=this.http.get<Receta[]>("http://localhost:3000/Recetas");
+    datos$.subscribe(dato=>{this.DSarrayRecetas=dato;})
+    //alert("resecetas en el servicio"+this.DSarrayRecetas)
+    return datos$;
   }
   obtener_Receta(indice:number):Receta{
+   
     return this.DSarrayRecetas[indice];
   }
   Adicionar_Receta(receta:Receta):void{
@@ -55,7 +59,7 @@ export class DsRecetasService implements OnInit {
    "ingredientes":r1.ingredientes,
    "Img":"./assets/fritura-malanga-e1494857372839-150x150.jpg"
  }).subscribe(datos=>{r1=datos;});
-  this.DSarrayRecetas.push(r1);
+ // this.DSarrayRecetas.push(r1);
  }
  putReceta(r1:Receta,indice:number):void{
   let camino:string="http://localhost:3000/Recetas/"+r1.id
@@ -66,7 +70,7 @@ export class DsRecetasService implements OnInit {
  "ingredientes":r1.ingredientes,
  "Img":"./assets/chicharritas-platano-e1497017839458-150x150.jpg"
 }).subscribe(datos=>{r1=datos;});
-this.DSarrayRecetas[indice]=r1;
+//this.DSarrayRecetas[indice]=r1;
 }
 
 deleteReceta(posicion:number,idBD:number):void{

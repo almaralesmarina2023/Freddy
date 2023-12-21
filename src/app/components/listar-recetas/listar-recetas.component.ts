@@ -21,9 +21,21 @@ export class ListarRecetasComponent implements OnInit{
   constructor(private servicio:DsRecetasService){
    
   }
+  // ngDoCheck(): void {
+  //   alert(this.servicio.DSarrayRecetas+"  docheck")
+  // }
 
   ngOnInit(): void {
-    this.BD_Recetas=this.servicio.getDatos();
+    this.getRecetasenListar();
+    //alert("acabo de cargar el componente"+this.servicio.DSarrayRecetas)
   }
   
+  getRecetasenListar():void{
+    let obs$=this.servicio.getDatos();
+   // alert("en listar"+this.servicio.DSarrayRecetas)
+    obs$.subscribe(datos=>{this.BD_Recetas=datos;});
+   // alert("en listar despues de subscribir"+this.servicio.DSarrayRecetas)
+    //alert(this.BD_Recetas + "despues de get receta")
+  }
+
 }
